@@ -11,7 +11,7 @@ h1 {
     color: darkblue;
 }
 main {
-    max-width: 150px;
+    max-width: auto;
 }
 main img {
     max-width: 150px;
