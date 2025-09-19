@@ -1,43 +1,76 @@
+/* CSS Variables defined in :root */
+:root {
+    --primary-color: darkblue;
+    --secondary-color: #eee;
+    --text-light: white;
+    --text-dark: #333;
+    --shadow-color: gray;
+    --border-color: rgba(0, 0, 0, 0.2);
+    --spacing-sm: 2px;
+    --spacing-md: 10px;
+    --spacing-lg: 20px;
+    --image-size-sm: 150px;
+    --image-size-lg: 200px;
+    --border-thin: 1px;
+    --border-thick: 1px solid #000;
+    --shadow: 0 0 30px gray;
+}
+
+/* Navigation styles */
 nav {
-    background-color: darkblue;
-    padding: 10px; 
+    background-color: var(--primary-color);
+    padding: var(--spacing-md); 
 }
+
+/* this is a comment */
 nav a {
-    color: white;
+    color: var(--text-light);
     display: block;
-    padding: 20px;
+    padding: var(--spacing-lg);
 }
+
+/* Heading styles */
 h1 {
-    color: darkblue;
+    color: var(--primary-color);
 }
+
+/* Main content styles */
 main {
     max-width: 100%;
 }
+
 main img {
-    max-width: 150px;
+    max-width: var(--image-size-sm);
     height: auto;
-    border: 1px solid black;
-    padding: 2px;
-    box-shadow: 0 0 30px gray;
+    border: var(--border-thin) solid black;
+    padding: var(--spacing-sm);
+    box-shadow: var(--shadow);
 }
+
+/* Paragraph styles */
 p {
-  padding: 0;
+    padding: 0;
 }
-aside{ 
+
+/* Aside styles */
+aside { 
     width: 20em;
     margin: 1em;
-    border: 1px solid rgb(0, 0, 0/ 0.2);
+    border: var(--border-thin) solid var(--border-color);
     padding: 1em;
-    background-color: #eee;
-    color: #333;
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
     text-align: center;
 }
+
 aside img {
-    width: 200px;
+    width: var(--image-size-lg);
     height: auto;
 }
+
+/* Footer styles */
 footer {
     margin-top: 1em;
-    border-top: 1px solid #000;
+    border-top: var(--border-thick);
     text-align: center;
 }
