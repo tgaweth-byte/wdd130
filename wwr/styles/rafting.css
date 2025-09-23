@@ -1,0 +1,396 @@
+/* CSS Variables */
+:root {
+    --primary-color: #1e40af;
+    --secondary-color: #1e3a8a;
+    --accent-color: #00bbff;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --background-light: #f8fafc;
+    --white: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 80px;
+    overflow: hidden;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+    float: left;
+    margin-top: 10px;
+}
+
+.nav-menu {
+    float: right;
+    list-style: none;
+    margin-top: 25px;
+}
+
+.nav-menu li {
+    display: inline-block;
+    margin-left: 2rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Clear floats */
+.header-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    margin-bottom: 4rem;
+    height: 500px;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin: 2rem auto;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Roboto', sans-serif;
+    max-width: 800px;
+}
+
+.hero-article {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    width: 90%;
+    max-width: 800px;
+    color: var(--text-dark);
+    overflow: hidden;
+}
+
+.article-image {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    float: left;
+    margin-right: 2rem;
+}
+
+.article-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.article-content p {
+    text-align: left;
+}
+
+/* Clear floats in article */
+.hero-article::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* History Section */
+.history-section {
+    background-color: var(--white);
+    padding: 4rem 0;
+    margin: 2rem 0;
+}
+
+.history-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+.history-content {
+    width: 100%;
+    overflow: hidden;
+}
+
+.history-content p {
+    width: 45%;
+    float: left;
+    text-align: justify;
+    margin-bottom: 2rem;
+}
+
+.history-content p:first-child {
+    margin-right: 5%;
+}
+
+.history-image {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    float: left;
+    margin: 0 2.5%;
+}
+
+/* Clear floats in history */
+.history-content::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Adventure Section */
+.adventure-section {
+    padding: 4rem 0;
+}
+
+.adventure-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+.gallery {
+    width: 100%;
+    overflow: hidden;
+}
+
+.gallery figure {
+    width: 18%;
+    float: left;
+    margin: 0 1%;
+    text-align: center;
+}
+
+.gallery img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.gallery figcaption {
+    margin-top: 1rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+/* Clear floats in gallery */
+.gallery::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+footer {
+    background-color: var(--text-dark);
+    color: var(--white);
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+.footer-container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.footer-container p {
+    float: left;
+    margin: 0;
+}
+
+.socialmedia {
+    float: right;
+}
+
+.socialmedia a {
+    display: inline-block;
+    padding: 0.5rem;
+    background-color: var(--white);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    margin-left: 1rem;
+}
+
+.socialmedia a:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+.socialmedia img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Clear floats in footer */
+.footer-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive Design */
+@media (max-width: 1240px) {
+    .container,
+    .header-container,
+    .footer-container {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        height: auto;
+        padding: 1rem;
+        text-align: center;
+    }
+    
+    .logo {
+        float: none;
+        display: block;
+        margin: 0 auto 1rem;
+    }
+    
+    .nav-menu {
+        float: none;
+        display: block;
+        margin-top: 0;
+    }
+    
+    .nav-menu li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .article-image {
+        float: none;
+        display: block;
+        margin: 0 auto 1rem;
+    }
+    
+    .history-content p {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+    }
+    
+    .history-image {
+        float: none;
+        display: block;
+        margin: 1rem auto;
+    }
+    
+    .gallery figure {
+        width: 48%;
+        margin: 1%;
+    }
+    
+    .footer-container p,
+    .socialmedia {
+        float: none;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    .socialmedia a {
+        margin: 0 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .gallery figure {
+        width: 100%;
+        margin: 1rem 0;
+    }
+    
+    .container {
+        padding: 0 10px;
+    }
+}
