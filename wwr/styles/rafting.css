@@ -19,10 +19,14 @@
 }
 
 body {
-    font-family: 'Roboto', arial, sans-serif;
+    font-family: arial, sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
     background-color: var(--background-light);
+}
+header main footer {
+    width: 840px;
+    margin: 0 auto;
 }
 
 .container {
