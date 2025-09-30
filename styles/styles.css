@@ -3,106 +3,139 @@
   padding: 0;
   box-sizing: border-box;
 }
-body{
-    font-size: 16px;
-    font-family: SUSE Mono, arial, sans-serif;
+
+header, .grid, footer {
+  max-width: 840px;
+  margin: 0 auto;
 }
+
+body {
+  font-size: 16px;
+  font-family: "SUSE Mono", arial, sans-serif;
+}
+
 /* CSS Variables defined in :root */
 :root {
-    --primary-color: darkblue;
-    --secondary-color: #eee;
-    --text-light: white;
-    --text-dark: #333;
-    --shadow-color: gray;
-    --border-color: rgba(0, 0, 0, 0.2);
-    --spacing-sm: 2px;
-    --spacing-md: 10px;
-    --spacing-lg: 20px;
-    --image-size-sm: 150px;
-    --image-size-lg: 200px;
-    --border-thin: 1px;
-    --border-thick: 1px solid #000;
-    --shadow: 0 0 30px gray;
+  --primary-color: darkblue;
+  --secondary-color: #eee;
+  --text-light: white;
+  --text-dark: #333;
+  --shadow-color: gray;
+  --border-color: rgba(0, 0, 0, 0.2);
+  --spacing-sm: 2px;
+  --spacing-md: 10px;
+  --spacing-lg: 20px;
+  --image-size-sm: 150px;
+  --image-size-lg: 200px;
+  --border-thin: 1px;
+  --border-thick: 1px solid #000;
+  --shadow: 0 0 30px gray;
 }
 
 /* Navigation styles */
 nav {
-    background-color: steelblue;
-    padding: 10px; 
+  background-color: steelblue;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 /* this is a comment */
 nav a {
-    color: white;
-    display: block;
-    padding: 10px;
+  display: block;
+  padding: 0.5rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
 }
 
 /* Heading styles */
 h1 {
-    color: steelblue;
-    padding: .5rem;
+  color: steelblue;
+  padding: 0.5rem;
+}
+
+.grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 3fr; /* Added: define grid columns */
 }
 
 /* Main content styles */
 main {
-    max-width: 640px;
+  grid-column: 2/3;
+  margin: 1rem;
 }
 
 main img {
-    width: 130px;
-    height: auto;
-    border: var(--border-thin) solid black;
-    padding: var(--spacing-sm);
-    box-shadow: var(--shadow);
-    float: right;
-    margin: 0 0 1rem 1rem;
+  width: 130px;
+  height: auto;
+  border: var(--border-thin) solid black;
+  padding: var(--spacing-sm);
+  box-shadow: var(--shadow);
+  float: right;
+  margin: 0 0 1rem 1rem;
 }
 
 /* Paragraph styles */
 p {
-   margin: 1rem;
-    padding: 0;
+  margin: 1rem;
+  padding: 0;
 }
 
 /* Aside styles */
-aside { 
-    width: 20em;
-    margin: 1em;
-    border: var(--border-thin) solid var(--border-color);
-    padding: 1em;
-    background-color: var(--secondary-color);
-    color: var(--text-dark);
-    text-align: center;
-    position: relative;
+aside {
+  width: 20em;
+  margin: 1em;
+  border: var(--border-thin) solid var(--border-color);
+  padding: 1em;
+  background-color: var(--secondary-color);
+  color: var(--text-dark);
+  text-align: center;
+  position: relative;
+  grid-column: 1/2;
+  grid-row: 1/2;
 }
 
 aside h2 {
   position: absolute;
   top: 67px;
   left: 150px;
+  color: var(--text-dark); /* Added: ensure text color */
+  margin: 0; /* Added: remove default margins */
 }
 
 aside img {
-    width: 200px;
-    height: auto;
+  width: 200px;
+  height: auto;
 }
 
 /* Footer styles */
 footer {
-    margin-top: 1em;
-    border-top: 1px solid #333;
-    text-align: center;
+  margin-top: 1em;
+  border-top: 1px solid #333;
+  text-align: center;
+  padding: 1rem 0; /* Added: better spacing */
 }
 
 /* Class Selectors */
 .box {
   margin: 1rem;
-  border: 1px solid rgba(0,0,0, .1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 1rem;
   background-color: #eee;
   color: #000;
 }
-.indent{
-    padding-left: 2rem;
+
+.indent {
+  padding-left: 2rem;
+}
+
+/* Clearfix for floated images */
+main::after {
+  content: "";
+  display: table;
+  clear: both;
 }

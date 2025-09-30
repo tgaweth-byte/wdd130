@@ -19,18 +19,20 @@
 }
 
 body {
-    font-family: arial, sans-serif;
+    font-family: Arial, sans-serif; 
     line-height: 1.6;
     color: var(--text-dark);
     background-color: var(--background-light);
 }
-header main footer {
-    width: 840px;
+
+/* Fixed: Added commas between selectors */
+header, main, footer {
+    max-width: 840px; /* Changed to max-width for better responsiveness */
     margin: 0 auto;
 }
 
 .container {
-    width: 1200px;
+    max-width: 1200px; /* Changed to max-width */
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -42,10 +44,11 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
+    /* Removed: display: grid (conflicts with float layout) */
 }
 
 .header-container {
-    width: 1200px;
+    max-width: 1200px; /* Changed to max-width */
     margin: 0 auto;
     padding: 0 20px;
     height: 80px;
@@ -63,6 +66,7 @@ header {
     float: right;
     list-style: none;
     margin-top: 25px;
+    /* Removed: display: flex (conflicts with float/block layout) */
 }
 
 .nav-menu li {
@@ -121,7 +125,7 @@ header {
     font-size: 3.5rem;
     margin: 2rem auto;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, sans-serif; /* Fallback since Roboto isn't imported */
     max-width: 800px;
 }
 
@@ -270,7 +274,7 @@ footer {
 }
 
 .footer-container {
-    width: 1200px;
+    max-width: 1200px; /* Changed to max-width */
     margin: 0 auto;
     padding: 0 20px;
     overflow: hidden;
