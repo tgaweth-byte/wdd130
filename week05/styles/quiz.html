@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Quiz Form</title>
+    <link rel="stylesheet" href="/week05/styles/quiz.css">
+</head>
+
+<body>
+    <main class="box">
+        <h1>✅ Basic HTML and CSS Quiz</h1>
+        <form class="box">
+            <div class="quiz-item box">
+                <label for="q1">1. What does HTML stand for ?</label>
+                <input type="text" name="q1" id="q1" required>
+            </div>
+            <div class="quiz-item box">
+                <label for="q2">2. Which HTML tag is used to create a hyperlink?</label>
+                <textarea name="q2" id="q2"></textarea>
+            </div>
+            <div class="quiz-item box">
+                <label for="q3">3. Which CSS property is used to change the text color of an element ?</label>
+                <select name="q3" id="q3">
+                    <option value="" selected disabled>Choose One ...</option>
+                    <option value="a">A. &lt;text-color&gt;</option>
+                    <option value="b">B. font-color</option>
+                    <option value="c">C. color</option>
+                </select>
+            </div>
+            <div class="quiz-item box">
+                <label for="q4">4. What is the bottom margin given this declaration ?</label>
+                <code class="box">margin: 10px 5px 15px;</code>
+                <input type="number" name="q4" id="q4">
+            </div>
+            <button type="submit">Submit Quiz</button>
+        </form>
+    </main>
+</body>
+
+</html>
