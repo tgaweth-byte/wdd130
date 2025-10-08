@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Adventures Rafting contact page - Get in touch with our team for bookings and inquiries">
+    <meta name="author" content="Gaweth Thalon">
+    <title>Contact Us - Adventures Rafting</title>
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img src="images/logo.jpg" alt="Adventures Rafting Logo" class="logo">
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="trips.html">Trips</a></li>
+                    <li><a href="contact.html" class="active">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="contact-container">
+            <!-- Company Information Section -->
+            <section class="company-info">
+                <h1>Adventures Rafting</h1>
+                <div class="contact-details">
+                    <div class="address">
+                        <p>123 Main River Street</p>
+                        <p>Kolob, California</p>
+                        <p>+1 999 999 9999</p>
+                        <p>info@whitewater.com</p>
+                    </div>
+                    <div class="map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d602.2728788481215!2d-72.28534715353598!3d18.509529899393126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sfr!2sht!4v1759884699032!5m2!1sfr!2sht"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" title="Adventures Rafting location"></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Form Section -->
+            <section class="contact-form-section">
+                <h2>Get in Touch!</h2>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Placeholder" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Placeholder" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Purpose of Message</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="general" name="purpose" value="general" required>
+                                <label for="general">General Inquiry</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="reservation" name="purpose" value="reservation">
+                                <label for="reservation">Reservation Question</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="website" name="purpose" value="website">
+                                <label for="website">Website Suggestion</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Type here" required></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Please Subscribe me to the monthly newsletter</label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Get in Touch!</button>
+                </form>
+            </section>
+
+            <!-- Employee Profiles Section -->
+            <section class="employee-profiles">
+                <h2>We Are Here to Serve You</h2>
+                <div class="employees-grid">
+                    <div class="employee">
+                        <img src="/wwr/images/employee1.jpeg" alt="River Guide - Sarah Johnson">
+                        <h3>Sarah Johnson</h3>
+                        <p>Head River Guide</p>
+                    </div>
+                    <div class="employee">
+                        <img src="/wwr/images/employee2.jpeg" alt="Adventure Coordinator - Mike Chen">
+                        <h3>Mike Chen</h3>
+                        <p>Adventure Coordinator</p>
+                    </div>
+                    <div class="employee">
+                        <img src="/wwr/images/employee3.jpeg" alt="Safety Officer - Emily Rodriguez">
+                        <h3>Emily Rodriguez</h3>
+                        <p>Safety Officer</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Adventures Rafting | Gaweth Thalon</p>
+            <nav class="socialmedia">
+                <a href="https://facebook.com" aria-label="Visit our Facebook page">
+                    <img src="images/facebook.svg" alt="Facebook logo">
+                </a>
+                <a href="https://twitter.com" aria-label="Visit our Twitter page">
+                    <img src="images/twitter.svg" alt="Twitter logo">
+                </a>
+                <a href="https://instagram.com" aria-label="Visit our Instagram page">
+                    <img src="images/instagram.svg" alt="Instagram logo">
+                </a>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>
