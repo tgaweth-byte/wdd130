@@ -12,31 +12,28 @@
 }
 
 /* Reset and Base Styles */
-*, 
-body,
-header, main, footer,
-.container,
-.header-container,
-.footer-container {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
     background-color: var(--background-light);
+}
+
+/* Layout Containers */
+header, main, footer,
+.container, .header-container, .footer-container, .contact-container {
     max-width: 840px;
-}
-
-body {
-    background-color: var(--background-light);
-}
-
-.container,
-.header-container,
-.footer-container {
-    max-width: 1200px;
     margin: 0 auto;
+}
+
+.container, .header-container, .footer-container {
+    max-width: 1200px;
     padding: 0 20px;
 }
 
@@ -61,11 +58,13 @@ header {
     margin-top: 10px;
 }
 
-.nav-menu,
-.nav-menu li {
+.nav-menu {
     float: right;
     list-style: none;
     margin-top: 25px;
+}
+
+.nav-menu li {
     display: inline;
     margin-left: 2rem;
 }
@@ -85,6 +84,7 @@ header {
     color: var(--white);
 }
 
+/* Clear floats */
 .header-container::after,
 .hero-article::after,
 .history-content::after,
@@ -120,7 +120,7 @@ header {
     color: var(--white);
 }
 
-.hero-content h1 {
+.hero h1 {
     font-size: 3.5rem;
     margin: 2rem auto;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -274,8 +274,6 @@ footer {
 
 /* Contact Page Styles */
 .contact-container {
-    max-width: 840px;
-    margin: 0 auto;
     padding: 1rem;
 }
 
@@ -349,9 +347,7 @@ footer {
     text-align: left;
 }
 
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group textarea {
+input[type="text"], input[type="email"], textarea {
     flex: 1;
     padding: 0.5rem;
     border: 1px solid #ccc;
@@ -360,7 +356,7 @@ footer {
     font-family: inherit;
 }
 
-.form-group textarea {
+textarea {
     resize: vertical;
     min-height: 80px;
 }
@@ -379,7 +375,7 @@ footer {
     gap: 0.5rem;
 }
 
-.radio-option input[type="radio"] {
+input[type="radio"] {
     margin: 0;
     width: 16px;
     height: 16px;
@@ -394,7 +390,7 @@ footer {
     margin-top: 1rem;
 }
 
-.checkbox-group input[type="checkbox"] {
+input[type="checkbox"] {
     margin: 0;
     width: 18px;
     height: 18px;
@@ -406,7 +402,7 @@ footer {
     margin: 0;
 }
 
-.submit-btn {
+button[type="submit"] {
     display: block;
     width: 200px;
     margin: 1.5rem auto 0;
@@ -421,7 +417,7 @@ footer {
     text-align: center;
 }
 
-.submit-btn:hover {
+button[type="submit"]:hover {
     background-color: #555;
 }
 
@@ -463,15 +459,6 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 1240px) {
-    .container,
-    .header-container,
-    .footer-container {
-        width: 100%;
-        padding: 0 20px;
-    }
-}
-
 @media (max-width: 768px) {
     .header-container {
         height: auto;
@@ -481,13 +468,11 @@ footer {
     
     .logo {
         float: none;
-        display: block;
         margin: 0 auto 1rem;
     }
     
     .nav-menu {
         float: none;
-        display: block;
         margin-top: 0;
     }
     
@@ -496,13 +481,12 @@ footer {
         margin: 0.5rem 0;
     }
     
-    .hero-content h1 {
+    .hero h1 {
         font-size: 2.5rem;
     }
     
     .article-image {
         float: none;
-        display: block;
         margin: 0 auto 1rem;
     }
     
@@ -514,13 +498,11 @@ footer {
     
     .history-image {
         float: none;
-        display: block;
         margin: 1rem auto;
     }
     
     .gallery figure {
         width: 48%;
-        margin: 1%;
     }
     
     .footer-container p,
@@ -540,7 +522,6 @@ footer {
     
     .employees-grid {
         grid-template-columns: 1fr;
-        gap: 1rem;
     }
     
     .form-group {
@@ -553,19 +534,17 @@ footer {
         margin-bottom: 0.25rem;
     }
     
-    .form-group input[type="text"],
-    .form-group input[type="email"],
-    .form-group textarea {
+    input[type="text"], input[type="email"], textarea {
         width: 100%;
     }
     
-    .submit-btn {
+    button[type="submit"] {
         width: 100%;
     }
 }
 
 @media (max-width: 480px) {
-    .hero-content h1 {
+    .hero h1 {
         font-size: 2rem;
     }
     
