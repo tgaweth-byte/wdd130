@@ -27,7 +27,7 @@ body {
 
 /* Layout Containers */
 header, main, footer,
-.container, .header-container, .footer-container, .contact-container {
+.container, .header-container, .footer-container, .contact-container, .trips-container {
     max-width: 840px;
     margin: 0 auto;
 }
@@ -141,13 +141,15 @@ header {
     overflow: hidden;
 }
 
+
+
 .article-image {
     width: 200px;
     height: 150px;
     object-fit: cover;
     border-radius: var(--border-radius);
     float: right;
-    margin-right: 2rem;
+    margin: 0 0 1rem 2rem;
 }
 
 .article-content h2 {
@@ -272,6 +274,182 @@ footer {
     height: 24px;
 }
 
+/* Home Page Styles */
+.newsletter {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.newsletter h2 {
+    margin-bottom: 1.5rem;
+    color: var(--white);
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newsletter-form input {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    flex: 1;
+    font-size: 1rem;
+}
+
+.newsletter-form button {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--accent-color);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.cta-section {
+    text-align: center;
+    padding: 3rem 0;
+    background-color: var(--white);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--secondary-color);
+}
+
+.home-grid {
+    padding: 3rem 0;
+}
+
+.home-grid .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.grid-item {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.grid-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+}
+
+.grid-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Trips Page Styles */
+.trips-container {
+    padding: 1rem;
+}
+
+.trips-cta {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.trips-cta h1 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.trip-descriptions {
+    margin-bottom: 3rem;
+}
+
+.trip {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    align-items: start;
+}
+
+.trip img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+.trip-info h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.trip-info ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+.trip-info li {
+    margin-bottom: 0.5rem;
+}
+
+.trip-table {
+    margin-top: 3rem;
+}
+
+.trip-table h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: 600;
+}
+
+tr:hover {
+    background-color: var(--background-light);
+}
+
 /* Contact Page Styles */
 .contact-container {
     padding: 1rem;
@@ -299,13 +477,6 @@ footer {
     margin-bottom: 1.5rem;
 }
 
-.address h2 {
-    color: var(--text-dark);
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-    font-weight: normal;
-}
-
 .address p {
     margin-bottom: 0.25rem;
     font-size: 1rem;
@@ -318,6 +489,8 @@ footer {
 .map iframe {
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 100%;
+    height: 300px;
 }
 
 .contact-form-section {
@@ -458,6 +631,19 @@ button[type="submit"]:hover {
     margin: 0;
 }
 
+/* Accessibility */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .header-container {
@@ -482,7 +668,11 @@ button[type="submit"]:hover {
     }
     
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
     }
     
     .article-image {
@@ -516,7 +706,8 @@ button[type="submit"]:hover {
         margin: 0 0.5rem;
     }
 
-    .contact-container {
+    .contact-container,
+    .trips-container {
         padding: 0.5rem;
     }
     
@@ -541,11 +732,35 @@ button[type="submit"]:hover {
     button[type="submit"] {
         width: 100%;
     }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
+    
+    .trip {
+        grid-template-columns: 1fr;
+    }
+    
+    .home-grid .container {
+        grid-template-columns: 1fr;
+    }
+    
+    table {
+        font-size: 0.9rem;
+    }
+    
+    th, td {
+        padding: 0.5rem;
+    }
 }
 
 @media (max-width: 480px) {
     .hero h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
     }
     
     .gallery figure {
