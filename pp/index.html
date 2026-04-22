@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>PlugPeople — Trouvez le bon artisan en un clic</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/week07/ExerciseTracking/obj/style.css">
+
+  <!-- Tailwind (base uniquement) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/week07/ExerciseTracking/bin/Debug/net10.0/script.js" defer></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-zinc-50 text-zinc-900">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <div class="brand-icon">P</div>
+        <span class="brand-text">PlugPeople</span>
+      </div>
+
+      <div class="nav-links">
+        <a href="#comment-ca-marche" class="nav-link">Comment ça marche</a>
+        <a href="#metiers" class="nav-link">Métiers</a>
+        <a href="#avantages" class="nav-link">Avantages</a>
+      </div>
+
+      <div class="nav-buttons">
+        <a href="app.html" class="btn-outline">
+          <span class="btn-text">Accéder</span>
+          <span class="btn-icon">→</span>
+        </a>
+        <a href="#" onclick="showProModal(); return false;" class="btn-primary">
+          Devenir pro
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Le bon artisan,<br><span class="hero-highlight">au bon moment.</span>
+        </h1>
+        <p class="hero-subtitle">
+          Trouvez rapidement un plombier, électricien ou menuisier fiable près de chez vous.
+        </p>
+
+        <div class="hero-actions">
+          <a href="app.html" class="hero-btn-primary">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Trouver un pro maintenant</span>
+          </a>
+          <a href="#" onclick="showProModal(); return false;" class="hero-btn-secondary">
+            Devenir professionnel
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust bar -->
+  <div class="trust-bar">
+    <div class="trust-container">
+      <div class="trust-item"><i class="fa-solid fa-check"></i> <span>Artisans vérifiés</span></div>
+      <div class="trust-item"><i class="fa-solid fa-check"></i> <span>Intervention rapide</span></div>
+      <div class="trust-item"><i class="fa-solid fa-check"></i> <span>Satisfaction garantie</span></div>
+      <div class="trust-item"><i class="fa-solid fa-check"></i> <span>Port-au-Prince & environs</span></div>
+    </div>
+  </div>
+
+  <!-- Comment ça marche -->
+  <section id="comment-ca-marche" class="section">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">Comment ça marche ?</h2>
+        <p class="section-subtitle">En 3 étapes simples, trouvez le professionnel qu'il vous faut.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card fade-in">
+          <div class="step-number">1️⃣</div>
+          <h3 class="step-title">Décrivez votre besoin</h3>
+          <p class="step-desc">Que ce soit une fuite, une installation électrique ou une réparation de meuble, expliquez
+            simplement votre problème.</p>
+        </div>
+        <div class="step-card fade-in">
+          <div class="step-number">2️⃣</div>
+          <h3 class="step-title">Nous sélectionnons</h3>
+          <p class="step-desc">Nos algorithmes et notre équipe vous mettent en relation avec les meilleurs artisans
+            disponibles près de chez vous.</p>
+        </div>
+        <div class="step-card fade-in">
+          <div class="step-number">3️⃣</div>
+          <h3 class="step-title">Intervention rapide</h3>
+          <p class="step-desc">Le professionnel arrive, réalise le travail et vous payez en toute sécurité via la
+            plateforme.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Métiers -->
+  <section id="metiers" class="section section-alt">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">Nos métiers</h2>
+        <p class="section-subtitle">Nous commençons par les services les plus demandés</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fa-solid fa-faucet service-icon"></i>
+          <h3 class="service-title">Plomberie</h3>
+          <p class="service-desc">Fuites, installation, chauffe-eau, évacuation...</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-bolt service-icon"></i>
+          <h3 class="service-title">Électricité</h3>
+          <p class="service-desc">Installation, réparation, tableau électrique, éclairage...</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-screwdriver-wrench service-icon"></i>
+          <h3 class="service-title">Menuiserie</h3>
+          <p class="service-desc">Réparation de meubles, portes, fenêtres, ébénisterie...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Avantages -->
+  <section id="avantages" class="section">
+    <div class="section-container">
+      <div class="benefits-grid">
+        <div class="benefits-content">
+          <h2 class="benefits-title">Pourquoi choisir PlugPeople ?</h2>
+          <div class="benefits-list">
+            <div class="benefit-item">
+              <div class="benefit-icon">🔒</div>
+              <div>
+                <h4 class="benefit-title-small">Artisans vérifiés</h4>
+                <p class="benefit-desc">Chaque professionnel est contrôlé et noté par la communauté.</p>
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">⏱️</div>
+              <div>
+                <h4 class="benefit-title-small">Intervention sous 2h</h4>
+                <p class="benefit-desc">Dans la plupart des cas, un artisan est disponible rapidement.</p>
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">💰</div>
+              <div>
+                <h4 class="benefit-title-small">Prix transparents</h4>
+                <p class="benefit-desc">Devis clair avant intervention. Pas de mauvaise surprise.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-quote">"Enfin une solution simple et fiable pour trouver un artisan de confiance."
+          </div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar"></div>
+            <div>
+              <div class="testimonial-name">Marie L.</div>
+              <div class="testimonial-location">Pétion-Ville</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="cta">
+    <div class="cta-container">
+      <h2 class="cta-title">Prêt à trouver votre artisan ?</h2>
+      <p class="cta-subtitle">Rejoignez des milliers de personnes qui ont déjà résolu leurs problèmes rapidement.</p>
+      <a href="app.html" class="cta-button">
+        Trouver un pro maintenant
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="footer-brand-icon">
+          <div class="brand-icon-small">P</div>
+          <span class="footer-brand-text">PlugPeople</span>
+        </div>
+        <p class="footer-desc">La plateforme qui connecte particuliers et artisans qualifiés en Haïti.</p>
+      </div>
+      <div class="footer-links">
+        <h4 class="footer-heading">Plateforme</h4>
+        <ul class="footer-list">
+          <li><a href="app.html">Trouver un artisan</a></li>
+          <li><a href="#" onclick="showProModal(); return false;">Devenir pro</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4 class="footer-heading">Entreprise</h4>
+        <ul class="footer-list">
+          <li><a href="#">À propos</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4 class="footer-heading">Suivez-nous</h4>
+        <div class="social-icons">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 PlugPeople — Tous droits réservés
+    </div>
+  </footer>
+
+  <!-- Modal Devenir Pro -->
+  <div id="pro-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Devenir professionnel sur PlugPeople</h3>
+        <p class="modal-subtitle">Rejoignez notre réseau d'artisans vérifiés et gagnez plus de missions.</p>
+      </div>
+
+      <div class="modal-form">
+        <input type="text" placeholder="Nom complet" class="modal-input">
+        <input type="tel" placeholder="Téléphone" class="modal-input">
+        <select class="modal-select">
+          <option value="">Métier principal</option>
+          <option>Plombier</option>
+          <option>Électricien</option>
+          <option>Menuisier / Ébéniste</option>
+        </select>
+      </div>
+
+      <div class="modal-actions">
+        <button onclick="hideProModal()" class="modal-btn-cancel">Annuler</button>
+        <button onclick="submitProRequest()" class="modal-btn-submit">Envoyer ma candidature</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>
